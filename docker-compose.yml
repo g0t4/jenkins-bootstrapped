@@ -3,7 +3,7 @@ version: "3.5"
 services:
   jenkins:
     image: weshigbee/jenkins-bootstrapped
-    build: .
+    build: ./jenkins
     volumes:
       - jenkins_home:/var/jenkins_home
     ports:
