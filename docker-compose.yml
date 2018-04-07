@@ -1,0 +1,13 @@
+version: "3.5"
+
+services:
+  jenkins:
+    image: weshigbee/jenkins-bootstrapped
+    build: .
+    volumes:
+      - jenkins_home:/var/jenkins_home
+    ports:
+      - "127.0.0.1:8190:8080"
+
+volumes:
+  jenkins_home:
