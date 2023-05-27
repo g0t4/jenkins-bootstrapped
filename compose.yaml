@@ -1,0 +1,11 @@
+services:
+  jenkins:
+    image: jenkins/jenkins:2.405 # change version # to update! docker compose up to update!
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:8080:8080" # limit access to localhost
+    volumes:
+      - "jenkins_home:/var/jenkins_home" # data director (config, jobs, results, plugins, etc)
+
+volumes:
+  jenkins_home:
